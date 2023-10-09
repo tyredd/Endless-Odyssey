@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
     public Transform arrowSpawn;
     private Animator anim;
 
+    public float topBound = 1.85f;
+    public float bottomBound = -3.45f;
+    public float sideBound = 11f;
 
     // Start is called before the first frame update
     void Start()
@@ -74,28 +77,28 @@ public class Player : MonoBehaviour
             Instantiate(arrowPrefab, arrowSpawn.position, arrowSpawn.rotation);
         }
 
-        /*
+        
         //Player Bounds
-        if (transform.position.x < -xRange)
+        if (transform.position.x < -sideBound)
         {
-            transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
+            transform.position = new Vector3(-sideBound, transform.position.y, transform.position.z);
         }
 
-        if (transform.position.x > xRange)
+        if (transform.position.x > sideBound)
         {
-            transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
+            transform.position = new Vector3(sideBound, transform.position.y, transform.position.z);
         }
 
-        if (transform.position.z < lowerBound)
+        if (transform.position.y < bottomBound)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, lowerBound);
+            transform.position = new Vector3(transform.position.x, bottomBound, transform.position.z);
         }
 
-        if (transform.position.z > topBound)
+        if (transform.position.y > topBound)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, topBound);
+            transform.position = new Vector3(transform.position.x, topBound, transform.position.z);
         }
 
-        */
+        
     }
 }
