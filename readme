@@ -1,1 +1,11 @@
+Endless Odyssey
+An endless side scrolling shooter in which you find yourself piloting a trireme, 
+either avoiding or shooting the ghostly vessels sailing towards you.
 
+WASD or Arrowkeys to control, Space to shoot
+
+There is animation controlled by player directional input, a 3 life 
+system and scoreboard on a basic UI overlay, as well as an infinitely scrolling
+seamless background
+
+All assests were created by myself using the online photo editor Photopea
