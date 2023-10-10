@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     private int score = 0;
     private int lives = 3;
+    public Text scoreText;
+    public Text livesText;
 
     // Start is called before the first frame update
     void Start()
@@ -24,15 +27,18 @@ public class GameManager : MonoBehaviour
         lives += value;
         if (lives <= 0)
         {
-            Debug.Log("Game Over");
+            livesText.text = "Game Over";
             lives = 0;
         }
-        Debug.Log("Lives = " + lives);
+        else
+        {
+            livesText.text = "Lives: " + lives;
+        }
     }
     public void AddScore(int value)
     {
         score += value;
-        Debug.Log("Score = " + score);
+        scoreText.text = "Score: " + score;
     }
 
 }
